@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * di
+ *
+ * @copyright Copyright © 2020 AWstreams. All rights reserved.
+ * @author    ahmed.atef@awstreams.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mageserv\PasswordReset\Api\PasswordResetRepositoryInterface" type="Mageserv\PasswordReset\Model\PasswordResetRepository"/>
+    <preference for="Mageserv\PasswordReset\Api\Data\ResultInterface" type="Mageserv\PasswordReset\Model\Data\Result"/>
+</config>

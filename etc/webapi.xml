@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * webapi
+ *
+ * @copyright Copyright © 2020 AWstreams. All rights reserved.
+ * @author    ahmed.atef@awstreams.com
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/passwords/reset" method="POST">
+        <service class="Mageserv\PasswordReset\Api\PasswordResetRepositoryInterface" method="resetPassword"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/passwords/validate" method="POST">
+        <service class="Mageserv\PasswordReset\Api\PasswordResetRepositoryInterface" method="validateResetCode"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/passwords/change" method="PUT">
+        <service class="Mageserv\PasswordReset\Api\PasswordResetRepositoryInterface" method="changePassword"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
